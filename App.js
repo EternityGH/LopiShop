@@ -18,6 +18,7 @@ import {
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
+import RegisterScreen from './src/screens/user/RegisterScreen'
 
 import {
   Colors
@@ -26,47 +27,9 @@ import {
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Lopi</Text>
-              <Text style={styles.sectionDescription}>
-                Chào mừng đến với Lopi
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-            <Input
-  placeholder='BASIC INPUT'
-/>
 
-<Input
-  placeholder='INPUT WITH ICON'
-  leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-/>
-
-<Input
-  placeholder='INPUT WITH CUSTOM ICON'
-  leftIcon={
-    <Icon
-      name='user'
-      size={24}
-      color='black'
-    />
-  }
-/>
-
-<Input
-  placeholder='INPUT WITH ERROR MESSAGE'
-  errorStyle={{ color: 'red' }}
-  errorMessage='ENTER A VALID ERROR HERE'
-/>
-            </View>
-            
-        </ScrollView>
-      </SafeAreaView>
+            <RegisterScreen />
+ 
     </>
   );
 };
